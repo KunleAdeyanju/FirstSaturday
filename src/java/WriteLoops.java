@@ -41,7 +41,7 @@ public class WriteLoops {
 
         // Write a FOR loop that makes 10 iterations, start at 21.
         // calling
-        w = w + 1;
+        for(int i = 21; i < 32; i++)w = w + 1;
         // each time through the loop
         
         return w;
