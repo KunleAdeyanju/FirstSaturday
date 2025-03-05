@@ -72,7 +72,7 @@ public class WriteLoops {
 
         // Write a FOR loop from 1 to less than 5001 by 11s.
         // calling
-        w = w + 1;
+        for(int i = 5000; i >= 0; i-=11  ) w = w + 1;
         // each time through the loop
         
         return w;
@@ -84,7 +84,7 @@ public class WriteLoops {
         // Write a nested FOR loop(s), where one counts from
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
-                w = w + 1;
+        for(int i = 0; i<20; i++) for(int j = 0; j<=4; j++) w = w + 1;
                 // each time through the inner loop
 
         return w;
