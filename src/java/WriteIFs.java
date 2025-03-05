@@ -24,8 +24,6 @@ public class WriteIFs
         }else {
             coolOn();
         }
-
-
         
         return this.ss;
     }
@@ -36,6 +34,7 @@ public class WriteIFs
         // AND 
         // “insideTemp()” is less than 62, 
         // calls “startAFire(fireplace1)”
+        if(outsideTemp() < 50 && insideTemp() < 62) startAFire(fireplace1);
 
     }
 
