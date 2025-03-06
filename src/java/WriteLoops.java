@@ -167,8 +167,8 @@ public class WriteLoops {
         }
             // calling
             // each time through the inner loop
-        
-        return (w>=3); // >= 3;
+        System.out.println(w);
+        return (w >= 3); // >= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -200,10 +200,22 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
+
+        while (serverIsRunning()){
+            waitFor(5);
+            w = w + 1;
+
+        }
+
+        if(serverIsRunning() == false){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("do it", adminPhoneNumber);
+            //w = w + 1;
+        }
+
 
         // calling
-        w = w + 1;
+
         // each time through the inner loop
         
         return w;
